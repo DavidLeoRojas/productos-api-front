@@ -1,52 +1,71 @@
-/* styles.css */
-
-/* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Estilos generales */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f0f2f5;
-  color: #333;
+  background-color: #f5f6fa;
+  color: #2f3640;
+  padding: 2rem;
+  margin: 0;
+}
+
+h1, h2 {
+  color: #273c75;
   text-align: center;
-  padding: 40px;
 }
 
-/* Título */
-h1 {
-  margin-bottom: 30px;
-  color: #2c3e50;
-}
-
-/* Lista del menú */
-ul {
-  list-style: none;
-  padding: 0;
-  max-width: 400px;
-  margin: 0 auto;
-}
-
-/* Ítems del menú */
-li {
-  margin: 15px 0;
-}
-
-/* Enlaces del menú */
-a {
+label, input, button {
   display: block;
-  background-color: #3498db;
+  margin: 0.5rem auto;
+  width: 80%;
+  max-width: 400px;
+}
+
+input {
+  padding: 0.5rem;
+  border: 1px solid #dcdde1;
+  border-radius: 5px;
+}
+
+button {
+  padding: 0.6rem;
+  background-color: #44bd32;
   color: white;
-  padding: 15px 20px;
-  border-radius: 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #4cd137;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+ul li {
+  margin: 0.5rem 0;
+}
+
+a {
   text-decoration: none;
-  font-size: 1.1rem;
-  transition: background-color 0.3s ease;
+  color: #0984e3;
 }
 
 a:hover {
-  background-color: #2980b9;
+  text-decoration: underline;
 }
+
+pre {
+  background-color: #dcdde1;
+  padding: 1rem;
+  border-radius: 5px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin-top: 1rem;
+  width: 80%;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
