@@ -7,98 +7,46 @@
   box-sizing: border-box;
 }
 
-/* Fuente general y fondo */
+/* Estilos generales */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f4f4f4;
+  background-color: #f0f2f5;
   color: #333;
-  line-height: 1.6;
-  padding: 20px;
+  text-align: center;
+  padding: 40px;
 }
 
-/* Encabezados */
-h1, h2, h3 {
-  color: #222;
-  margin-bottom: 10px;
+/* Título */
+h1 {
+  margin-bottom: 30px;
+  color: #2c3e50;
 }
 
-/* Enlaces */
+/* Lista del menú */
+ul {
+  list-style: none;
+  padding: 0;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Ítems del menú */
+li {
+  margin: 15px 0;
+}
+
+/* Enlaces del menú */
 a {
-  color: #007BFF;
+  display: block;
+  background-color: #3498db;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 8px;
   text-decoration: none;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
 }
 
 a:hover {
-  text-decoration: underline;
-}
-
-/* Contenedor general */
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-  background: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Botones */
-button, .btn {
-  display: inline-block;
-  background: #28a745;
-  color: white;
-  padding: 10px 16px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  font-size: 1rem;
-}
-
-button:hover, .btn:hover {
-  background: #218838;
-}
-
-/* Formularios */
-input[type="text"],
-input[type="email"],
-input[type="password"],
-select,
-textarea {
-  width: 100%;
-  padding: 10px;
-  margin: 8px 0 16px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-/* Tablas */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-}
-
-th, td {
-  border: 1px solid #ddd;
-  padding: 12px;
-  text-align: left;
-}
-
-th {
-  background-color: #007BFF;
-  color: white;
-}
-
-tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 15px;
-  margin-top: 40px;
-  color: #666;
-  font-size: 0.9rem;
+  background-color: #2980b9;
 }
