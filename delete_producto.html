@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>DELETE Producto</title>
+</head>
+<body>
+  <h2>Eliminar Producto</h2>
+  <label>ID del producto a eliminar:</label>
+  <input type="number" id="id_producto">
+  <button onclick="eliminar()">Eliminar</button>
+  <pre id="respuesta"></pre>
+
+  <script>
+    const url = 'https://apex.oracle.com/pls/apex/nelsonmoreno/productos/producto/:id';
+
+    function eliminar() {
+      const id = document.getElementById('id_producto').value;
+      fetch(`${url}/${id}`, {
+        method: 'DELETE'
+      }).then(res => res.text()).then(msg => {
+        document.getElementById('respuesta').textContent = msg;
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>POST Producto</title>
+</head>
+<body>
+  <h2>Agregar Producto</h2>
+  <input placeholder="ID" id="id_producto"><br>
+  <input placeholder="ID Marca" id="id_marca"><br>
+  <input placeholder="Nombre" id="nombre"><br>
+  <input placeholder="Stock" id="stock"><br>
+  <input placeholder="Valor Unitario" id="valor_unitario"><br>
+  <input placeholder="Fecha Vencimiento YYYY-MM-DD" id="fecha_venc"><br>
+  <input placeholder="IVA" id="iva"><br>
+  <button onclick="agregar()">Agregar</button>
+  <pre id="respuesta"></pre>
+
+  <script>
+    const url = 'https://apex.oracle.com/pls/apex/nelsonmoreno/productos/producto';
+
+    function agregar() {
+      const data = {
+        id_producto: +document.getElementById('id_producto').value,
+        id_marca: +document.getElementById('id_marca').value,
+        nombre: document.getElementById('nombre').value,
+        stock: +document.getElementById('stock').value,
+        valor_unitario: +document.getElementById('valor_unitario').value,
+        fecha_venc: document.getElementById('fecha_venc').value,
+        iva: +document.getElementById('iva').value
+      };
+
+      fetch(url, {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(data)
+      }).then(res => res.text()).then(msg => {
+        document.getElementById('respuesta').textContent = msg;
+      });
+    }
+  </script>
+</body>
+</html>
